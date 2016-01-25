@@ -19,6 +19,12 @@ class Goiken_director
             'goiken'=>$anketo['goiken']];
     }
     
+    public function getGoikenDataAll()
+    {
+        $anketoList = $this->builders['anketoSelector']->findAll();
+        return $anketoList;
+    }
+    
     public function addGoiken($code, $param)
     {
         $insertedRow = $this->builders['anketoAppender']->insert($code,$param);

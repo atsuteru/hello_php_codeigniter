@@ -32,4 +32,12 @@ class Anketo_selector extends CI_Model {
         $row = $query->row(0, 'array');
         return $row;
     }
+    
+    public function findAll()
+    {
+        $sql = "SELECT * FROM anketo ORDER BY code";
+        $query = $this->db->query($sql);
+        $rows = $query->result();
+        return $rows;
+    }
 }
