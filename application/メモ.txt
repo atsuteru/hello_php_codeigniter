@@ -1,0 +1,1 @@
+http://localhost/hellophp5/index.php/receive/position/123/456
